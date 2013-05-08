@@ -1,10 +1,10 @@
-require 'pi_piper'
+require 'pi_facer'
 
 puts "Press the switch to get started"
 
-PiPiper.watch :pin => 17, :invert => true do |pin|
+PiFacer.watch :io => 1, :invert => true do |pin|
   puts "Pin changed from #{pin.last_value} to #{pin.value}"
 end
 
-PiPiper.wait
+PiFacer.wait
 

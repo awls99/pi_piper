@@ -1,4 +1,4 @@
-require 'pi_piper'
+require 'pi_facer'
 
 unit = 0.1
 dot = unit
@@ -24,7 +24,7 @@ character_timing = { "a" => [dot, dash],             "b" => [dash, dot, dot, dot
                      "8" => [dash, dash, dash, dot, dot],    "9" => [dash, dash, dash, dash, dot]
                    } 
 
-pin = PiPiper::Pin.new(:pin => 17, :direction => :out)
+pin = PiFacer::FIO.new(:io => 1, :direction => :out)
 pin.off
 
 loop do

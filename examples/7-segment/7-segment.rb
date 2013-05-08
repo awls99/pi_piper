@@ -1,12 +1,12 @@
-require 'pi_piper'
+require 'pi_facer'
 
-s1 = PiPiper::Pin.new(:direction => :out, :pin => 27)
-s2 = PiPiper::Pin.new(:direction => :out, :pin => 24)
-s3 = PiPiper::Pin.new(:direction => :out, :pin => 23)
-s4 = PiPiper::Pin.new(:direction => :out, :pin => 25)
-s5 = PiPiper::Pin.new(:direction => :out, :pin => 18)
-s6 = PiPiper::Pin.new(:direction => :out, :pin => 22)
-s7 = PiPiper::Pin.new(:direction => :out, :pin => 17)
+s1 = PiFacer::FIO.new(:direction => :out, :io => 1)
+s2 = PiFacer::FIO.new(:direction => :out, :io => 2)
+s3 = PiFacer::FIO.new(:direction => :out, :io => 3)
+s4 = PiFacer::FIO.new(:direction => :out, :io => 4)
+s5 = PiFacer::FIO.new(:direction => :out, :io => 5)
+s6 = PiFacer::FIO.new(:direction => :out, :io => 6)
+s7 = PiFacer::FIO.new(:direction => :out, :io => 7)
 
 
 pins = [s1, s2, s3, s4, s5, s6, s7]
@@ -26,7 +26,7 @@ numbers = [zero, one, two, three, four, five, six, seven, eight, nine]
 
 pins.each { |p| p.off }
 
-PiPiper.watch :pin => 4, :trigger => :rising do
+PiFacer.watch :io => 4, :trigger => :rising do
   (0..250).each do
     pins.each { |p| p.update_value(Random.rand(2) == 1) }
   end
@@ -34,4 +34,4 @@ PiPiper.watch :pin => 4, :trigger => :rising do
   numbers[number].call
 end
 
-PiPiper.wait
+PiFacer.wait
