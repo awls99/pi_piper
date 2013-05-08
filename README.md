@@ -42,11 +42,6 @@ pin.off
 ```
 
 
-## Documentation
-
-API documentation for Pi Piper can be found at [rdoc.info](http://rdoc.info/github/jwhitehorn/pi_piper/frames/).
-
-
 ***
 <img src="http://www.raspberrypi.org/wp-content/uploads/2012/03/Raspi_Colour_R.png" width="90" />
 
