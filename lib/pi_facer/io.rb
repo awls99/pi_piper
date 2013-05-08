@@ -12,7 +12,7 @@ module PiFacer
 		# @option options [Symbol] :trigger Indicates when the wait_for_change method will detect a change, either :rising, :falling, or :both edge triggers. Defaults to :both.
 		def initialize(direction: :in, invert: true, trigger: :both, **options)
 			raise "Invalid direction. Options are :in or :out" unless [:in, :out].include? direction
-			raise "Invalid IO, Piface IO numbers go from 0 to 7" unless (0..7).include? options[:io]
+			raise "Invalid IO, Piface IO numbers go from 1 to 8" unless (1..8).include? options[:io]
 			raise 'Invalid trigger' unless %I[rising falling both].include? trigger 
 
 			@io        = options[:io]
