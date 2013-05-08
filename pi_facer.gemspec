@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
 	s.date = Time.now.strftime("%Y-%m-%d")
 	s.description = "Event driven Raspberry Pi Piface library based on pi_piper lib"
 	s.email = "awls99@gmail.com"
-	s.extra_rdoc_files = ["README.md", "lib/pi_piper.rb", "lib/pi_piper/bcm2835.rb", "lib/pi_piper/libbcm2835.img", "lib/pi_piper/pin.rb", "lib/pi_piper/spi.rb"]
-	s.files = ["Manifest", "README.md", "Rakefile", "lib/pi_piper.rb", "lib/pi_piper/bcm2835.rb", "lib/pi_piper/libbcm2835.img", "lib/pi_piper/pin.rb", "lib/pi_piper/spi.rb", "pi_piper.gemspec"]
+	s.extra_rdoc_files = ["README.md", "lib/pi_facer.rb", "lib/pi_facer/io.rb"]
+	s.files = ["Manifest", "README.md", "Rakefile", "lib/pi_facer.rb", "lib/pi_facer/io.rb", "pi_facer.gemspec"]
 	s.homepage = "https://github.com/awls99/pi_piper"
 	s.require_paths = ["lib"]
 	s.rubygems_version = "1.8.23"

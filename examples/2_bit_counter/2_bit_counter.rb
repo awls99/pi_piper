@@ -1,4 +1,4 @@
-require 'pi_piper'
+require 'pi_facer'
 
 puts "Press the switch to get started"
 pin17 = PiFacer::FIO.new(:io => 0, :direction => :out)
