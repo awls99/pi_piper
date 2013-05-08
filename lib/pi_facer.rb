@@ -1,13 +1,10 @@
-Dir[File.dirname(__FILE__) + '/pi_piper/*.rb'].each {|file| require file }
-at_exit do 
-  PiPiper::Bcm2835.close
-end 
-PiPiper::Bcm2835.init
+require 'piface'
+Dir[File.dirname(__FILE__) + '/pi_facer/*.rb'].each {|file| require file }
 
 module PiPiper
   extend self
   
-  #Defines an event block to be executed when an pin event occurs.
+  #Defines an event block to be executed when an event occurs.
   #
   # == Parameters:
   # options:
