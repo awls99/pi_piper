@@ -1,4 +1,4 @@
-module Pifacer
+module PiFacer
 	# Represents a Piface io on the Raspberry Pi
 	class FIO
 		attr_reader :io, :last_value, :value, :direction, :invert
